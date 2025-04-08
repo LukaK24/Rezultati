@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "Rezultati.Controllers.LigeController",
+    "Method": "Get",
+    "RelativePath": "api/v1/Lige",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rezultati.Controllers.LigeController",
+    "Method": "GetBysifra",
+    "RelativePath": "api/v1/Lige/{sifra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sifra",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
