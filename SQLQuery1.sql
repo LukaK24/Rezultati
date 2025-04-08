@@ -29,13 +29,13 @@ CREATE TABLE igraci (
 -- Tablica Utakmice (ime kluba umjesto ID-a)
 CREATE TABLE utakmice (
     sifra INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-    domaci_klub VARCHAR(50)  not NULL,
-    gostujuci_klub VARCHAR(50)  not NULL,
+    domaci_klub INT NOT NULL,
+    gostujuci_klub INT NOT NULL,
     datum_vrijeme DATETIME NOT NULL,
     rezultat VARCHAR(10),
-    FOREIGN KEY (domaci_klub) REFERENCES klubovi(naziv), 
-    FOREIGN KEY (gostujuci_klub) REFERENCES klubovi(naziv) 
-	);
+    FOREIGN KEY (domaci_klub) REFERENCES klubovi(sifra),
+    FOREIGN KEY (gostujuci_klub) REFERENCES klubovi(sifra)
+);
   
 INSERT INTO lige (naziv, drzava)  
 VALUES  
@@ -1003,3 +1003,4 @@ values
 ('Maximilian', 'Arnold', 'Veznjak', 'VfL Wolfsburg'),
 ('Bence', 'Dárdai', 'Veznjak', 'VfL Wolfsburg'),
 ('Patrick', 'Wimmer', 'Veznjak', 'VfL Wolfsburg');
+
